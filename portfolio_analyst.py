@@ -78,8 +78,8 @@ class TickerAnalyst(y.Ticker):
 
 
 if __name__ == '__main__':
-    etf = Etf("BTC-USD",multi_ticker=False)
-    etf.get_history()
-    etf.get_returns()
-    etf.get_sma()
-    etf.get_ewm()
+    ticker = TickerAnalyst("BTC-USD",multi_ticker=False)
+    ticker.get_history()
+    ticker.get_returns()
+    ticker.get_sma()
+    ticker.get_ewm()
