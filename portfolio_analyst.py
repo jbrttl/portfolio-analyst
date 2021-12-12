@@ -1,8 +1,8 @@
 import yfinance as y
 import pandas as pd
 
-class Etf(y.Ticker):
-    """Simple class to collect price information on ETFs from Yahoo finance"""
+class TickerAnalyst(y.Ticker):
+    """Simple class to collect price information for given tickers from Yahoo finance"""
     def __init__(self,ticker,multi_ticker=False):
         self.multitick = multi_ticker
 
@@ -46,10 +46,10 @@ class Etf(y.Ticker):
         sma_df.index = self.sma.index
 
         for col in self.sma.columns:
-            sma_df[f'{col}_sma'] = self.rets[col].rolling(freq,min_periods=1).mean()
+            sma_df[f'{col}_sma_{freq}'] = self.sma[col].rolling(freq,min_periods=1).mean()
         return sma_df
 
-    def get_ewm(self,alpha=0.9):
+    def get_ewm(self,alpha=0.05):
         """Calculates exponential moving average for a given alpha."""
         self.ewm = self.history
 
