@@ -3,3 +3,4 @@
 __pycache__/
 data/
 *.sh
+portfolio_analyst.egg-info
