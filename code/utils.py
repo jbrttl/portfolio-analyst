@@ -3,6 +3,7 @@ import pandas as pd
 
 @dataclass
 class Dateconvert:
+    """Common utility functions for both central bank and ticker data"""
 
     indx: pd.DatetimeIndex
 
