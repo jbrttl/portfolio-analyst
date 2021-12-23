@@ -30,12 +30,14 @@ class TickerAnalyst(y.Ticker):
 
         for col in self.rets.columns:
             if freq == 'd':
+                returns_df = returns_df.resample('D').ffill()
                 returns_df[f'{col}_daily_ret'] = self.rets[col].pct_change()
                 returns_df[f'{col}_cumul'] = ((returns_df[f'{col}_daily_ret'] + 1)).cumprod()
                 return returns_df
-            elif freq == 'm':
-                returns_df[f'{col}_monthly_ret'] = self.rets[col].resample('M').ffill().pct_change()
-                returns_df[f'{col}_cumul'] = ((returns_df[f'{col}_monthly_ret'] + 1)).cumprod()
+            else:
+                returns_df = returns_df.resample('D').ffill()
+                returns_df[f'{col}_{freq.upper()}_ret'] = self.rets[col].resample(freq.upper()).ffill().pct_change()
+                returns_df[f'{col}_cumul'] = ((returns_df[f'{col}_{freq.upper()}_ret'] + 1)).cumprod()
                 return returns_df
 
     def get_sma(self,freq=150):
