@@ -6,11 +6,11 @@ Collect data on central bank market interventions. Using various statistical tec
 # Get central bank data:
 1. ECB asset purchase programme data
 
-curl 'https://www.ecb.europa.eu/mopo/pdf/APP_breakdown_history.csv?fe3f0618390295f6e54b73227e892d96'>>APP_breakdown_history.csv
+curl 'https://www.ecb.europa.eu/mopo/pdf/APP_breakdown_history.csv?fe3f0618390295f6e54b73227e892d96'>>'APP_breakdown_history.csv'
 
 2. ECB open market operations data
 
-curl 'https://www.ecb.europa.eu/mopo/implement/omo/html/tops_mobu.zip?1335610d7e5530ede67cc62e0441e33a' >> ecp_omo/
+curl 'https://www.ecb.europa.eu/mopo/implement/omo/html/tops_mobu.zip?1335610d7e5530ede67cc62e0441e33a' >> 'ecp_omo/'
 
 3. FED balance sheet data
 
