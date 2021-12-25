@@ -1,5 +1,5 @@
 # portfolio-analyst
-Build on top of Yahoo finance functionality and calculates simple financial metrics for provided tickers.
+Provide utility to fetch financial asset data from Yahoo finance and calculate simple financial metrics (returns, moving averages etc.) for provided tickers.
 
 Collect data on central bank market interventions. Using various statistical techniques evaluate impact of central bank interventions on provided ticker data.
 
