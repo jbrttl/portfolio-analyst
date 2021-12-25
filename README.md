@@ -10,7 +10,7 @@ curl 'https://www.ecb.europa.eu/mopo/pdf/APP_breakdown_history.csv?fe3f061839029
 
 2. ECB open market operations data
 
-curl 'https://www.ecb.europa.eu/mopo/implement/omo/html/tops_mobu.zip?1335610d7e5530ede67cc62e0441e33a' >> 'ecp_omo/'
+curl 'https://www.ecb.europa.eu/mopo/implement/omo/html/tops_mobu.zip?1335610d7e5530ede67cc62e0441e33a' >> 'ecp_omo'
 
 3. FED balance sheet data
 
