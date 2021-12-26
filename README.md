@@ -18,4 +18,4 @@ curl https://fred.stlouisfed.org/graph/fredgraph.csv?bgcolor=%23e1e9f0&chart_typ
 
 # TODO:
 1. Collect data from other major central banks: BoE, PBoC, CBoJ
-2. Implemnt various statistical techniques to asses level of impact on central bank market interventions on financial instrument valuations
+2. Implement various statistical techniques to asses level of impact of central bank market interventions on financial instrument valuations
